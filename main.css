@@ -10,6 +10,14 @@ input{
     background-color: rgb(224, 237, 255) !important;
 }
 
+#grp-input.was-validate input:focus{
+    color: #292321;
+    background-color: #fff;
+    border-color: #fe9e86;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(223 64 64 / 50%);
+}
+
 .exceptionWrap{
     position: absolute;
     bottom: 5%;
@@ -20,8 +28,7 @@ input{
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
-    user-select: none;
-    
+    user-select: none;   
 }
 
 .exceptionWrap .invalid{
