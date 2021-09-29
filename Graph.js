@@ -72,16 +72,21 @@ const GRAPH = (function(){
                 if(element.value.length == 0){
                     this.popupException(element.name, moduleException.zero);
                     c = false;
+                    element.focus();
                 } else if(element.value.match(/[\!\@\#\$\%\^\&\*\(\)\[\]\-\_\=\+\|\\\`\~\'\"\;\:\,\<\.\>\/\?]/gi)){
                     this.popupException(element.name, moduleException.spec);
                     v = false;
+                    element.focus();
                 } else if(element.name === 'value' && element.value.match(/[\D]/gi)){
                     this.popupException(element.name, moduleException.number);
                     n = false;
+                    element.focus();
                 } else if(element.name === 'value' && parseInt(element.value)>100){
                     this.popupException(element.name, moduleException.limit);
                     l = false;
+                    element.focus();
                 }
+                uiElements.input.classList.add("was-validate")
             }
 
             if(!c || !v || !n || !l){
@@ -90,6 +95,7 @@ const GRAPH = (function(){
 
             graphList.forEach(el=>{
                 if(el.column == column.value){
+                    column.focus();
                     d = true;
                 }
             });
@@ -184,6 +190,7 @@ const GRAPH = (function(){
         this.clearInput = function(){
             uiElements.column.value = "";
             uiElements.value.value = "";
+            uiElements.input.classList.remove("was-validate");
         }
 
         this.readOnlyToggle = function(isReadOnly){
@@ -198,7 +205,7 @@ const GRAPH = (function(){
         init:function(){
             const body = document.body;
             const wrap = document.querySelector("#grp-wrap");
-            // const graphList = document.querySelector("#grp-list");
+            const input = document.querySelector("#grp-input");
             const column = document.querySelector("#column");
             const value = document.querySelector("#value");
             const btn = document.querySelector("#btn");
@@ -230,6 +237,7 @@ const GRAPH = (function(){
             const ui = {
                 body,
                 wrap,
+                input,
                 column,
                 value,
                 btn,
