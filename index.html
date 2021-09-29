@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="my-5 py-5"></div>
+        <div class="container d-flex justify-content-center h-100 align-items-start">
+            <div class="col-8">
+                <div class="h1 text-center fw-bold">
+                    Graph
+                </div>
+
+                <div id="grp-wrap">
+                </div>
+
+                <div id="grp-input" class="d-flex flex-wrap justify-content-center">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="col">
+                            <input class="form-control rounded-0 rounded-start border-end-0" type="text" name="column"
+                                id="column" placeholder="column name">
+                        </div>
+                        <div class="col">
+                            <input class="form-control rounded-0" type="text" name="value" id="value"
+                                placeholder="column value">
+                        </div>
+                        <button id="btn" class="btn btn-success rounded-0 rounded-end">ADD</button>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="checkbox" name="readonly" id="readonly">
+                        <label for="readonly" class="user-select-none">readonly</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+        <script src="Graph.js"></script>
+        <script src="main.js"></script>
+    </body>
+
+</html>
